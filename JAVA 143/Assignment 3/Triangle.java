@@ -28,8 +28,8 @@ public class Triangle {
         double c = p3.distance( p1 );
       
         double s = (a + b + c) / 2.0;
-        double area = Math.sqrt(s * (s-a) * (s-b) * (s*c));
-        return area;   // need fixed
+        double area = Math.sqrt(s * (s-a) * (s-b) * (s-c));
+        return area;   
     }
     // getPerimeter
     public double getPerimeter(){
@@ -43,7 +43,11 @@ public class Triangle {
     
     // contains
     public boolean contains ( Triangle t ){
-        return true;     // need finish
+        
+        if( (contains(t.p1)) && (contains(t.p2)) && (contains(t.p2))){
+            return true;
+        }
+        return false;
     }
     
     // toString
