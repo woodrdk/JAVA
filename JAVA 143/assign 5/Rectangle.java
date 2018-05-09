@@ -47,8 +47,26 @@ public class Rectangle implements Shape{
       return "{" + p1 + ", " + p2 + ", " + p3 + ", " + p4 + "}" ;
    }
    
+   
+   
    public boolean equals( Object other ){
-      return true;
+       if ( other == null ) {
+          return false;
+       }
+       if ( other instanceof Rectangle ) {
+            Rectangle line = (Rectangle) other;
+            return line.p1.equals( p1 ) && line.p2.equals( p2 ) && line.p3.equals( p3 ) && line.p4.equals( p4 )
+                || line.p1.equals( p1 ) && line.p2.equals( p3 ) && line.p3.equals( p2 ) && line.p4.equals( p4 )
+                || line.p1.equals( p4 ) && line.p2.equals( p2 ) && line.p3.equals( p3 ) && line.p4.equals( p1 )
+                || line.p1.equals( p4 ) && line.p2.equals( p3 ) && line.p3.equals( p2 ) && line.p4.equals( p1 )
+                
+                /*|| line.p1.equals( p2 ) && line.p2.equals( p1 ) && line.p3.equals( p3 )
+                || line.p1.equals( p2 ) && line.p2.equals( p3 ) && line.p3.equals( p1 )
+                || line.p1.equals( p3 ) && line.p2.equals( p1 ) && line.p3.equals( p3 )
+                || line.p1.equals( p3 ) && line.p2.equals( p2 ) && line.p3.equals( p1 )*/;
+        }
+        return false;
+
    }
    
 }

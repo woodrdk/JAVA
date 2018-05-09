@@ -97,7 +97,7 @@ public class Triangle implements Shape {
         return false;
     }
     
-    /**
+    /*
      * Java standard toString() method
      */
     public String toString() {

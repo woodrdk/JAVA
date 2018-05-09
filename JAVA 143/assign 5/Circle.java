@@ -48,8 +48,24 @@ public class Circle implements Shape{
    }
    
    public boolean equals( Object other ){
-      return true;
+       if ( other == null ) {
+          return false;
+       }
+       if ( other instanceof Circle ) {
+           Circle c = (Circle) other;
+           if(c.center == this.center && c.radius == this.radius){
+                return true;
+           }
+                 
+                                      
+       }
+       return false;
+
+
+                    
+       
    }
+   
    
 }
 

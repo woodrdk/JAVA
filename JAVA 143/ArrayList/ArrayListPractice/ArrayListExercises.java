@@ -28,6 +28,40 @@ public class ArrayListExercises{
         
         capitalizePlurals(list);
         System.out.println(list);
+        
+        list.add(3, "OH NOES");
+        list.add(4, "OH NOES");
+        System.out.println(list);
+        
+        removePlurals(list);
+        System.out.println(list);
+        
+        addStars(list);
+        System.out.println(list);
+        
+        removeStars(list);
+        System.out.println(list);
+    }
+    
+    public static void removeStars(ArrayList<String> list){
+    // increment by one because remove shifted elements
+        for ( int i = 1; i < list.size(); i++){
+            list.remove(i);
+        }
+    }
+    
+    public static void addStars(ArrayList<String> list){
+        for ( int i = 1; i < list.size(); i+=2){
+            list.add(i, "*");
+        }
+    }
+    
+    public static void removePlurals(ArrayList<String> list){
+        for ( int i = list.size()- 1; i >= 0 ; i--){
+            if (list.get(i).toLowerCase().endsWith("s")){
+                list.remove(i);
+            }
+        }
     }
     
     public static void capitalizePlurals(ArrayList<String> list){
