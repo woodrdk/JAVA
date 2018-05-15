@@ -9,7 +9,7 @@ import java.util.*;
  * It has a method to draw itself in the graphics window.
  *
  * @author Ken Meerdink
- * @author YourName Here
+ * @author Robert Wood Jr
  * @version CPW 143 Fall 2016 Programming Assignment 6 
  *
  */
@@ -43,8 +43,23 @@ public class OverLappedRectangles {
      */
     public void moveToTop( Point p ) {
         // TODO: YOUR CODE GOES HERE.
+       for (int i = rects.size()-1; i > 0; i--){
+         if(contains(p, rects.get(i)))
+         {
+            deleteRect( i );
+            // addRect( Point );        
+         }
+       }
     }
    
+   public boolean contains(Point p, Rectangle143 r){
+       if( r.getX() < p.getX() && p.getX() < r.getX() + r.getWidth()
+         && r.getY() < p.getY() && p.getY() < r.getY() + r.getHeight())
+       {
+          return true;
+       }
+       return false;
+   }
     /**
      * Add r to top of z-list.
      * Code provided for Programming Assignment 3
