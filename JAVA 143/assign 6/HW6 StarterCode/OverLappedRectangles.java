@@ -46,8 +46,8 @@ public class OverLappedRectangles {
        for (int i = rects.size()-1; i > 0; i--){
          if(contains(p, rects.get(i)))
          {
-            deleteRect( i );
-            addRect( rects[i]);        
+            addRect(deleteRect( i ));
+//            addRect( rects[i]);        
          }
        }
     }
