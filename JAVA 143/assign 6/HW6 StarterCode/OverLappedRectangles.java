@@ -43,12 +43,14 @@ public class OverLappedRectangles {
      */
     public void moveToTop( Point p ) {
         // TODO: YOUR CODE GOES HERE.
-       for (int i = 0; i < rects.size(); i++){
+
+       for (int i = rects.size()-1; i > -1 ; i--){
          if(contains(p, rects.get(i)))
          {
             addRect(deleteRect( i ));
-//            addRect( rects[i]);        
+            break;
          }
+        
        }
     }
    
