@@ -44,7 +44,14 @@ public class Calculator {
             boolean isValid = true;
             
             // TODO: needs try/catch block
-            firstOperand = Integer.parseInt( tokens[ 0 ] );
+            try{
+  	             firstOperand = Integer.parseInt( tokens[ 0 ] );
+            }
+            catch(NumberFormatException e){
+            	 System.out.println("Number format exception on first operand");
+                 isValid = false;
+            }
+// commented out to test with      firstOperand = Integer.parseInt( tokens[ 0 ] );
             
             // we set value of isValid to false
             // whenever we get invalid input.
@@ -56,7 +63,16 @@ public class Calculator {
             }
             
             // TODO:needs try/catch block
-            secondOperand = Integer.parseInt( tokens[ 2 ] );
+            try{
+                secondOperand = Integer.parseInt( tokens[ 2 ] );
+            }
+            catch(NumberFormatException e){
+            	 System.out.println("Number format exception on second operand");
+                 isValid = false;
+            }
+
+            
+            //secondOperand = Integer.parseInt( tokens[ 2 ] );
             
             // isValid == true: we have two integers and a legal operator.
             if ( isValid ) {
