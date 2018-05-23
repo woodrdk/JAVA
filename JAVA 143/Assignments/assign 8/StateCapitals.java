@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 // file: StateCapitals.java
 // Author: Ken Meerdink
-// Author: YOUR NAME HERE
-// Purpose: FILL IN A PURPOSE HERE
+// Author: Robert M. Wood Jr.
+// Purpose: The purpose of this assignment is to gain experiences using Maps.
 
 public class StateCapitals {
     public static void main( String[] args ) {
@@ -69,6 +69,8 @@ public class StateCapitals {
         catch( Exception e ) {
             System.out.println( e );
         }
+        
+        /// this set can be replaced kinda with a map looped
         boolean stateFound = false;
         for ( int i = 0; stateFound == false && i < states.length; i++ ) {
             if ( state.equals( states[ i ][ 0 ] ) ) {
@@ -76,6 +78,8 @@ public class StateCapitals {
                 stateFound = true;
             }
         }
+        
+        /// and above
         if ( !stateFound && !state.equals( "" ) ) {
             System.out.println( "The state of " + state + " is not in our state list." );
         }
