@@ -54,7 +54,7 @@ public class Calculator {
   	             firstOperand = Integer.parseInt( tokens[ 0 ] );
             }
             catch(NumberFormatException e){
-            	 System.out.println("Number format exception on first operand");
+            	 System.out.println("NumberFormatException on first operand");
                  isValid = false;
             }
             // commented out to test with      firstOperand = Integer.parseInt( tokens[ 0 ] );
@@ -74,7 +74,7 @@ public class Calculator {
                 secondOperand = Integer.parseInt( tokens[ 2 ] );
             }
             catch(NumberFormatException e){
-            	 System.out.println("Number format exception on second operand");
+            	 System.out.println("NumberFormatException on second operand");
                  isValid = false;
             }
 
