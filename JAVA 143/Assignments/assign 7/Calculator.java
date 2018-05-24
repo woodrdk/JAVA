@@ -1,9 +1,10 @@
 import java.util.*;
 
 /**
- * TODO: Javadoc comment here about Calculator class
+ * 
  * This class allows a user to enter 2 operands and one operator and perform a math calculation.
- * The class contains all of the code for functionality and does not reference any other sources.
+ * The class contains all of the code for functionality
+ *
  * @author Ken M
  * @author for the try catch and java doc comments Robert M. Wood Jr
  * @version 1.1 ( May 23 2018)
@@ -97,7 +98,15 @@ public class Calculator {
     }
     
     /**
-     * TODO: Java doc comment here
+     * This method will take the first operand and the operator to perform a mathmatical equation with 
+     * the second operator. Returning the result of the equation.
+     *
+     * @param firstOperand is an integer which is the first digit for the equation
+     * @param secondOperand is an integer which is the second digit for the equation
+     * @param operator is a character which is the math operator for the equation ex. + - x /
+     * @return returns the equations results after it recieves the numbers and what the math equation will be 
+     * @throws Number Format exception if the first or second operand is not a number
+     *   if the operator is not a valid operator then will return operator "x" not supported.
      */
     public static int calculate( int firstOperand, 
                                  int secondOperand, 
@@ -116,10 +125,13 @@ public class Calculator {
         }
     }
     
-    /**
-     * Java doc comment inserted here
+    /** 
      * The following code displayInstructions when called will display the instructions for the class.
      * In this case it will print 6 lines explaining how to use the calculator correctly.
+     *
+     * @param no parameters passed
+     * @return does not return, but prints out the instructions
+     * @throws no exception 
      */
     public static void displayInstructions() {
         System.out.println( "This program evaluates binary arithmetic" );
