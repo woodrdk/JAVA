@@ -39,7 +39,7 @@ public class InClassMapsAndSets {
         sortAndRemoveDuplicates( list );
         
         System.out.println("After:");
-        System.out.println(list);
+       System.out.println(list);
         
         // exercise 2
         Map<String, String> map = new HashMap<String, String>();
