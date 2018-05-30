@@ -71,25 +71,25 @@ public class StateCapitals {
         }
         
         /// this set can be replaced kinda with a map looped
-       /*       
+            
         boolean stateFound = false;
-        Map stateCapitolMap = ArrayUtils.toMap(states);
+        /*Map stateCapitolMap = ArrayUtils.toMap(states);
         System.out.println(state + "'s capitol is " + stateCapitolMap.get(state));
+       */
        
         Map<String, String> stateCapitolMap = new HashMap< String, String>();
         for (int i = 0; i < states.length; i++){
-            for(int j = 0; j < states[i].length; j++){
-                stateCapitolMap.put(states[i], states[j]);
-            }
+            stateCapitolMap.put(states[i][0], states[i][1]);
         }
+        
+        
         if(stateCapitolMap.containsKey(state)){
-            String capitol = stateCapitolMap.get(state);
+            String capitol = stateCapitolMap.get(state).toString();// fix error here
             System.out.println(state + "'s capital is " + capitol);
             stateFound = true;
         }
-        */
-          
         
+          
        /* 
         for ( int i = 0; stateFound == false && i < states.length; i++ ) {
             if ( state.equals( states[ i ][ 0 ] ) ) {
