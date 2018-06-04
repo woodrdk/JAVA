@@ -1,6 +1,6 @@
 // file: RecursiveMethodProject.java
 // author: Ken Meerdink - main method
-// author: YOUR NAME HERE - printEnglish & toEnglish
+// author: Robert Wood Jr. - printEnglish & toEnglish
 
 public class RecursiveMethodProject {
 
@@ -22,13 +22,14 @@ public class RecursiveMethodProject {
     }
     public static void printEnglish( int n ) {
         // REPLACE THIS CODE
-        System.out.print( "printEnglish: What is " + n + "?" );
+
+        System.out.print( "printEnglish( " + n + ")" );
         
     }
 
     public static String toEnglish( int n ) {
         // REPLACE THIS CODE
-        return "toEnglish: What is " + n + "?";
+        return "toEnglish( " + n + ")" ;
     }
     
     private static String digitToEnglish( int n ) {
