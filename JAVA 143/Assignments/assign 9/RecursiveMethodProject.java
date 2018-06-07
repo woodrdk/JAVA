@@ -14,6 +14,7 @@ public class RecursiveMethodProject {
             printEnglish( testCases[ i ] );
             System.out.println();
         }
+        System.out.println();
         
         for ( int i = 0; i < testCases.length; i++ ) {
             System.out.println( "toEnglish( " + testCases[ i ] + " )" );
@@ -41,8 +42,8 @@ public class RecursiveMethodProject {
             }
         }
         else{
-            printEnglish(n/10); 
-            System.out.print(digitToEnglish(n%10) + " ");
+            printEnglish(n / 10); 
+            System.out.print(digitToEnglish(n % 10) + " ");
         }
     }
 
@@ -52,32 +53,12 @@ public class RecursiveMethodProject {
                 return "negative " + digitToEnglish(n) + "";
             }
             else{
-                return digitToEnglish(n)+ " ";
+                return digitToEnglish(n);
             }
         }
         else{
-            return toEnglish(n/10) + digitToEnglish(n % 10) + " " ;// + digitToEnglish(n % 10) ;
-        }
-       
-       /*
-       
-        if (n < 9 && n > -9){
-            if (n < 0){
-                return "negative " + digitToEnglish(n);
-            }
-        }
-        else{
-            return digitToEnglish(n / 10);
-        }
-    
-        if ( n < 0 ) {
-            return "negative " + digitToEnglish (n / 10 % 10) + " " + digitToEnglish( n % 10);
-        }
-        else{
-            return digitToEnglish( n /10 % 10) + " " + digitToEnglish(n % 10);
-        }
-        */
-        
+            return toEnglish(n / 10) +" " + digitToEnglish(n % 10)  ;
+        }        
     }
     
     private static String digitToEnglish( int n ) {

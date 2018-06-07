@@ -2,7 +2,7 @@ import java.util.*;
 
 // file: JumpItGame.java
 // author: Ken Meerdink - main method
-// author: YOUR NAME HERE - findLowestCost method
+// author: Robert Wood - findLowestCost method
 
 public class JumpItGame {
     public static void main( String[] args ) {
@@ -45,10 +45,28 @@ public class JumpItGame {
     }
     private static int findLowestCost( int[] board, int index ) {
         // YOUR CODE GOES HERE.
+        int cost = 0;
+        int position = 0;
+        if( board[ position + 1 ]< board[ position + 2 ]){
+            return cost + findLowestCost(board[position], position);
+        }
+        else{
+            return cost + findLowestCost(cost, position);
+        }
         
-        // the following line is here only to make the
-        // starter code compile. You need to replace it.
-        return 0;  
+        /*
+        while ( position < board.length - 2 ) {
+            if ( board[ position + 1 ] < board[ position + 2 ] ) {
+                cost += board[ position + 1 ];
+                position += 1;
+            }
+            else { // move two columns
+                cost += board[ position + 2 ];
+                position += 2;
+            }
+        }
+        return cost;
+         */
     }
     
     /**
