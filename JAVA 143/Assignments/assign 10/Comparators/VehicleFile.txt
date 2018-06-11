@@ -1,0 +1,8 @@
+Toyota	Corolla	2010	20300	E
+Ford	Focus	1996	152999	P
+Triumph	TR3	1963	250765	F
+Toyota	Corolla	2011	2300	E
+Toyota	Corolla	2000	100300	G
+Pontiac	G3	2009	35074	G
+Chrysler	300	2005	85693	P
+Pontiac	G5	2009	90123	F
