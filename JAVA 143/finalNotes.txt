@@ -1,0 +1,100 @@
+Final sample
+1. D & F illegal
+2.
+	max length
+	public static int maxLength(ArrayList<String>a){
+		int len = 0;
+		for(int i = 0; i < a.size(); i++){
+			if(a.get(i).length() > len){
+				len = a.get(i).length;
+			}
+		}
+		return len;
+	}
+
+	MIN LENGTH
+	public static int maxLength(ArrayList<String>a){
+		if a.size() == 0 ){ 
+			return 0;
+		}
+		int len = a.get(0).length;
+		for(int i = 1; i < a.size(); i++){
+			if(a.get(i).length() > len){
+				len = a.get(i).length;
+			}
+		}
+		return len;
+	}
+
+3.
+
+	A) { brick, plaster}
+	B) { blue, green, yellow}
+	C) { fruit, peach}
+	D) { animal, cat, dog, ipl}
+
+4. 
+
+	1,3	9
+	4,4	
+
+5. 
+public static String starString(int n){
+	if( n == 0 ) {
+		return "*";
+	}
+	else{
+		return starString( n-1 ) + starString( n- 1 );		
+	}
+}
+ 
+or
+
+public static String starString(int n){
+	if( n == 0 ) {
+		return "*";
+	}
+	else{
+		String str = starString( n-1 );
+		return str + str;
+	}
+}
+
+9. A.
+
+10. E.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
